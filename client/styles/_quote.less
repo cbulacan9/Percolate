@@ -1,0 +1,69 @@
+.quote-container.full {
+	display: block;
+	max-width: 100%;
+	height: 216px;
+	background-image: url('../images/valve-splash-2.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 60px 0;
+	padding: 40px;
+	clear: both;
+}
+
+.quote {
+	position: relative;
+	display: block;
+	background-color: rgba(31, 9, 60, 0.8);
+	background-origin: padding-box;
+	background-size: auto;
+	padding: 40px;
+	text-align: center;
+	p {
+		color: white;
+		font-style: italic;
+	}
+	.testimonial {
+		color: white;
+	}
+}
+
+@media (min-width: @content-width) {
+	.quote-container.full {
+		padding: 40px;
+	}
+	.quote {
+		width: @content-width;
+		margin: 0 auto;
+		p {
+			font-size: 24px;
+		}
+	}
+}
+
+@media (max-width: @content-width) and (min-width: 720px) {
+	.quote-container.full {
+		padding: 0;
+	}
+	.quote {
+		box-sizing: border-box;
+		width: inherit;
+		height: inherit;
+		p {
+			font-size: 20px;
+		}
+	}
+}
+
+@media (max-width: 720px) and (min-width: 260px) {
+	.quote-container.full {
+		padding: 0;
+	}
+	.quote {
+		box-sizing: border-box;
+		width: inherit;
+		height: inherit;
+		p {
+			font-size: 16px;
+		}
+	}
+}

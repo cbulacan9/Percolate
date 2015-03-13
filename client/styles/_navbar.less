@@ -1,0 +1,141 @@
+.header-container {
+  width: @content-width;
+  height: 90px;
+  margin: 0 auto;
+  clear: both;
+}
+
+header {
+  a {
+    color: @percolate-blue;
+  }
+  height: inherit;
+  div {
+    height: 90px;
+    display: inline-block;
+    float: left;
+  }
+  .logo {
+    a {
+      line-height: 90px;
+      img {
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 200px;
+      }
+    }
+  }
+  .nav-responsive {
+    float: right;
+    display: none;
+    div {
+      line-height: 90px;
+      i {
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 200px;
+      }
+    }
+  }
+  ul {
+    list-style-type: none;
+    margin: 0em;
+    padding: .25em;
+    height: inherit;
+    li {
+      display: inline;
+      margin: 0 0.9em;
+      a {
+        line-height: 90px;
+        vertical-align: bottom;
+        height: inherit;
+      }
+    }
+  }
+  .primary.navigation {
+    font-size: 1.125em;
+    vertical-align: bottom;
+  }
+  .secondary.navigation {
+    font-size: .8125em;
+    text-wrap: suppress;
+    // .request-demo a { // TOGGLE CLASS
+    //   border: solid @percolate-blue 1px;
+    //   font-weight: bold;
+    //   padding: 0.5em;
+    // }  
+  }
+}
+
+.hide-nav {
+  display: none;
+}
+
+@media (min-width:1100px) {
+  header div.navigation {
+    display: inline-block;
+  }
+}
+
+@media (max-width:1100px) and (min-width: 720px) {
+  div.logo {
+    width: 100%;
+  }
+  div.header-container {
+    width: 90%;
+  }
+  header div.navigation {
+    display: none;
+    clear: both;
+    height: 30px;
+    margin-bottom: 20px;
+    ul {
+      height: inherit;
+    }
+    li {
+      margin-left: 0;
+      margin-right: 1.5em;
+      a {
+        font-size: 18px;
+      }
+    }
+  }
+  div.nav-responsive {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 720px) and (min-width: 260px) {
+  div.primary.navigation {
+    height: 60px;
+  }
+}
+
+@media (max-width:260px) and (min-width: 230px) {
+  div.logo {
+    height: 120px;
+
+  }
+  div.primary.navigation {
+    height: 90px;
+  }
+}
+
+@media (max-width:230px) and (min-width: 218px) {
+  div.primary.navigation {
+    height: 120px;
+  }
+}
+
+@media (max-width: 218px) and (min-width: 200px) {
+  div.primary.navigation {
+    height: 150px;
+  }
+}
+
+@media (max-width: 200px) {
+  div.primary.navigation {
+    height: 180px;
+  }
+}
+

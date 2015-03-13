@@ -1,0 +1,101 @@
+@cs-section: 48%;
+
+.case-study-container {
+	width: 100%;
+	margin: 60px auto 0;
+	h1, .testimonial {
+		color: @percolate-orange;
+		margin: 0 auto 40px;
+	}
+	hr {
+		width: @content-width;
+		margin: 60px auto;
+	}
+	clear: both;
+}
+
+.testimonial {
+	p {
+		font-style: italic;
+		color: @percolate-plain;
+	}
+	span {
+		font-size: 16px;
+		line-height: 24px;
+		color: @percolate-plain;
+	}
+}
+
+.case-study-section {
+	float: left;
+	height: 530px;
+	margin-right: 3.44828%;
+	margin-bottom: 60px;
+	p {
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica;
+		text-align: left;
+		font-size: 16px;
+		line-height: 24px;
+	}
+	&:nth-child(odd) {
+		margin-right: 0;
+		float: right;
+	}
+	img {
+		width: 100%;
+	}
+}
+
+@media (min-width: @content-width) {
+	.case-study-container h1 {
+		width: @content-width;
+	}
+	.testimonial {
+		width: @content-width;
+		p {
+			font-size: 24px;
+			line-height: 32px;
+		}
+	}
+	.case-study-section {
+		position: relative;
+		width: @cs-section;
+		img {
+
+			position: absolute;
+			bottom: 0;
+		}
+	}
+}
+
+@media (max-width: @content-width) and (min-width: 720px) {
+	.case-study-container h1 {
+		width: inherit;
+	}
+	.testimonial {
+		width: inherit;
+		p {
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+	.case-study-section {
+		width: @cs-section;
+	}
+}
+
+@media (max-width: 720px) {
+	.case-study-container h1 {
+		width: inherit;
+	}
+	.testimonial {
+		width: inherit;
+		p {
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+	.case-study-section {
+		width: 100%;
+	}
+}
