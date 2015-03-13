@@ -17,5 +17,6 @@ App.Routers.Main = Backbone.Router.extend({
     new App.Views.CaseStudy();
     new App.Views.Quote();
     new App.Views.Action({model: email});
+    new App.Views.Footer();
   }
 });
