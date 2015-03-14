@@ -1,4 +1,5 @@
 # Percolate readme
 
-This is an example readme file.
-Describe your site/app here.
+Built with Backbone and Express.
+
+Styled using LESS.
