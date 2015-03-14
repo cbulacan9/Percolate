@@ -30,7 +30,6 @@
 	float: left;
 	height: 530px;
 	margin-right: 3.44828%;
-	margin-bottom: 60px;
 	p {
 		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica;
 		text-align: left;
@@ -60,17 +59,20 @@
 	.case-study-section {
 		position: relative;
 		width: @cs-section;
+		margin-bottom: 60px;
 		img {
-
 			position: absolute;
 			bottom: 0;
 		}
 	}
 }
 
-@media (max-width: @content-width) and (min-width: 720px) {
-	.case-study-container h1 {
-		width: inherit;
+@media (max-width: @content-width) and (min-width: 620px) {
+	.case-study-container {
+		clear: both;
+		h1 {
+			width: inherit;
+		}
 	}
 	.testimonial {
 		width: inherit;
@@ -81,12 +83,16 @@
 	}
 	.case-study-section {
 		width: @cs-section;
+		margin-bottom: 10px;
 	}
 }
 
-@media (max-width: 720px) {
-	.case-study-container h1 {
-		width: inherit;
+@media (max-width: 620px) {
+	.case-study-container {
+		clear: both;
+		h1 {
+			width: inherit;
+		}
 	}
 	.testimonial {
 		width: inherit;
@@ -96,6 +102,10 @@
 		}
 	}
 	.case-study-section {
+		&:nth-child(0) {
+			margin: 0 1em 20px;
+		}
 		width: 100%;
+		margin: 20px 1em;
 	}
 }

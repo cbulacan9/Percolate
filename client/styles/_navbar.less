@@ -17,6 +17,9 @@ header {
   }
   a {
     color: @percolate-blue;
+    &:hover {
+      color: @percolate-orange;
+    }
   }
   height: inherit;
   div {
@@ -76,16 +79,7 @@ header {
   }
   .secondary.navigation {
     font-size: .8125em;
-    .request-demo a { // TOGGLE CLASS
-      border: solid @percolate-blue 1px;
-      font-weight: bold;
-      padding: 0.5em;
-    }  
   }
-}
-
-.hide-nav {
-  display: none;
 }
 
 @media (min-width:1100px) {
@@ -95,6 +89,17 @@ header {
   ul a {
     line-height: 90px;
   }
+  .request-demo a { // TOGGLE CLASS
+    border: solid @percolate-blue 1px;
+    font-weight: bold;
+    padding: 0.5em;
+  }
+  .show {
+    display: inline-block;
+  }
+  .navbars {
+    display: none;
+  }
 }
 
 @media (max-width:1100px) {
@@ -103,7 +108,7 @@ header {
   }
 }
 
-@media (max-width:1100px) and (min-width: 720px) {
+@media (max-width:1100px) {
   div.logo {
     width: 100%;
   }
@@ -111,7 +116,6 @@ header {
     width: 90%;
   }
   header div.navigation {
-    display: none;
     clear: both;
     height: 30px;
     margin-bottom: 20px;
@@ -126,39 +130,45 @@ header {
       }
     }
   }
-}
-
-@media (max-width: 720px) and (min-width: 260px) {
-  div.primary.navigation {
-    height: 60px;
+  .show {
+    display: none;
+  }
+  .navbars {
+    display: inline-block;
   }
 }
 
-@media (max-width:260px) and (min-width: 230px) {
-  div.logo {
-    height: 120px;
+// @media (max-width: 720px) and (min-width: 260px) {
+//   div.primary.navigation {
+//     height: 60px;
+//   }
+// }
 
-  }
-  div.primary.navigation {
-    height: 90px;
-  }
-}
+// @media (max-width:260px) and (min-width: 230px) {
+//   div.logo {
+//     height: 120px;
 
-@media (max-width:230px) and (min-width: 218px) {
-  div.primary.navigation {
-    height: 120px;
-  }
-}
+//   }
+//   div.primary.navigation {
+//     height: 90px;
+//   }
+// }
 
-@media (max-width: 218px) and (min-width: 200px) {
-  div.primary.navigation {
-    height: 150px;
-  }
-}
+// @media (max-width:230px) and (min-width: 218px) {
+//   div.primary.navigation {
+//     height: 120px;
+//   }
+// }
 
-@media (max-width: 200px) {
-  div.primary.navigation {
-    height: 180px;
-  }
-}
+// @media (max-width: 218px) and (min-width: 200px) {
+//   div.primary.navigation {
+//     height: 150px;
+//   }
+// }
+
+// @media (max-width: 200px) {
+//   div.primary.navigation {
+//     height: 180px;
+//   }
+// }
 

@@ -14,10 +14,16 @@ App.Views.Action = Backbone.View.extend({
   },
 
   initialize: function() {
+    this.model = new App.Models.Email();
     this.render();
   },
 
+  handleError: function(model, error) {
+    $('.validation-error').html('✗ ' + error.msg);
+  },
+
   render: function() {
+    Backbone.Validation.bind(this);
     this.$el.html(this.template);
     return this;
   },
@@ -30,7 +36,6 @@ App.Views.Action = Backbone.View.extend({
     var company = this.$('input[name=company]').val();
     var phone = this.$('input[name=phone]').val();
     var sendObj = {firstname: firstname, lastname: lastname, email: email, company: company, phone: phone};
-    console.log(sendObj);
     this.model.save(sendObj);
   }
 

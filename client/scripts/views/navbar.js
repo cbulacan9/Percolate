@@ -10,11 +10,11 @@ App.Views.Navbar = Backbone.View.extend({
   template: JST['client/templates/navbar.hbs'],
 
   events: {
-    'click div.show-menu': 'showMenu'
+    'click .navbars': 'showMenu'
   },
 
-  showMenu: function(e) {
-    $('div.navigation').toggle();
+  showMenu: function() {
+    $('div.navigation').toggleClass('show');
   },
 
   initialize: function() {

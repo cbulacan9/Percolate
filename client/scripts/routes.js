@@ -10,13 +10,12 @@ App.Routers.Main = Backbone.Router.extend({
   },
   index: function() {
     // Render index page
-    var email = new App.Models.Email({});
     new App.Views.Navbar();
     new App.Views.Splash();
     new App.Views.Highlight();
     new App.Views.CaseStudy();
     new App.Views.Quote();
-    new App.Views.Action({model: email});
+    new App.Views.Action();
     new App.Views.Footer();
   }
 });
