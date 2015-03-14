@@ -14,13 +14,13 @@ var taskConfig = function(grunt) {
     'concurrent',
     'useminPrepare',
     'concat:generated',
-    'handlebars',
     'less',
     'cssmin',
     'autoprefixer:server',
     'usemin',
     'htmlmin:dist',
     'uglify',
+    'handlebars',
     'clean:tmp'
   ]);
 };
